@@ -1,5 +1,6 @@
 language: ruby
 before_script:
+- rvm list
 - ENGINE=wz2008 rake dummy:app
 script:
 - cd spec/dummy && rails r ../../test.rb
