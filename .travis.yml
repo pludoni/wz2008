@@ -1,0 +1,7 @@
+language: ruby
+before_script:
+- ENGINE=wz2008 rake dummy:app
+script:
+- cd spec/dummy && rails r ../../test.rb
+rvm:
+- 2.1.1
