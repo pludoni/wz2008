@@ -16,7 +16,6 @@ end
 
 
 
-load 'rails/tasks/statistics.rake'
 require 'rails/dummy/tasks'
 
 
