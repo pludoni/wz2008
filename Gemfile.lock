@@ -3,7 +3,7 @@ PATH
   specs:
     wz2008 (0.0.1)
       ancestry
-      rails (~> 4.2.0.rc1)
+      rails (~> 4.1)
 
 GEM
   remote: https://rubygems.org/
