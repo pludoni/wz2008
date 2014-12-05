@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.description = "WZ2008 industrial classification codes as ActiveRecord tree "
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,data/db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,data,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 4.1"
   s.add_dependency "ancestry"
