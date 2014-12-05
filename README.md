@@ -35,3 +35,22 @@ Wz2008::Category.isic # only Categories with ISIC classification
 
 Wz2008::Category.group(:hierarchy).count # Hierarchy levels of the WZ2008
 ```
+
+## Example Usage - Simple Form
+
+* Create a Has And Belongs To Many relationship to one of your models (e.g. organisation/user/company).
+* Then create a Grouped-Select with SimpleForm and select2
+
+```slim
+- roots = Wz2008::Category.roots.order('wz_code')
+= f.association :wz2008_categories, as: :grouped_select, collection: roots,
+  label_method: :description_de,
+  group_method: :children,
+  group_label_method: :description_de,
+  include_blank: false,
+  input_html: { multiple: true },
+  multiple: true
+
+javascript:
+  $('select[multiple]').select2()
+```
